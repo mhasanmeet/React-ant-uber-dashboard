@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "Beef Sub Sandwich",
+        "price": "100",
+        "quantity": "3"
+    },
+    {
+        "id": "2",
+        "name": "Chow Mein",
+        "price": "150",
+        "quantity": "3"
+    },
+    {
+        "id": "3",
+        "name": "Falooda",
+        "price": "190",
+        "quantity": "3"
+    },
+    {
+        "id": "4",
+        "name": "Beef Burger",
+        "price": "290",
+        "quantity": "3"
+    },
+    {
+        "id": "5",
+        "name": "Milk Shake",
+        "price": "90",
+        "quantity": "3"
+    }
+]

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {Card, Descriptions, Divider, List, Button} from 'antd'
+import dishes from "./assets/data/dishes.json"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+    <Card title={'Order Title'} style={ {margin: 20} }>
+      <Descriptions bordered column={{lg: 1, md: 1, sm: 1}}>
+        <Descriptions.Item label="Customer">Mahmudul Hasan</Descriptions.Item>
+        <Descriptions.Item label="Customer Addess">Khilkhet, Dhaka</Descriptions.Item>
+      </Descriptions>
+
+      <Divider/>
+
+      <List dataSource={dishes} renderItem={(dishItem) =>(
+        <List.Item>
+          <div>{dishItem.name}</div>
+          <div>{dishItem.quantity}</div>
+          <div>{dishItem.price}</div>
+        </List.Item>
+      )}>
+
+      </List>
+    </Card>
+  )
 }
 
 export default App;
