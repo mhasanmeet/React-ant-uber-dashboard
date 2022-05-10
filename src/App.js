@@ -1,27 +1,41 @@
-import {Card, Descriptions, Divider, List, Button} from 'antd'
-import dishes from "./assets/data/dishes.json"
+import DetailedOrder from "./modules/DetailedOrder";
+import Orders from "./modules/Orders";
+import { Routes, Route } from 'react-router-dom'
+import { Layout, Image } from "antd";
+import SideMenu from "./components/SideMenu";
+import RestaurantMenu from "./modules/RestaurantMenu";
+
+const { Sider, Content, Footer } = Layout;
 
 function App() {
   return(
-    <Card title={'Order Title'} style={ {margin: 20} }>
-      <Descriptions bordered column={{lg: 1, md: 1, sm: 1}}>
-        <Descriptions.Item label="Customer">Mahmudul Hasan</Descriptions.Item>
-        <Descriptions.Item label="Customer Addess">Khilkhet, Dhaka</Descriptions.Item>
-      </Descriptions>
+    <Layout>
 
-      <Divider/>
+      <Sider style={{height: "100vh", backgroundColor: 'white'}}>
+        <Image src="https://logos-world.net/wp-content/uploads/2020/11/Uber-Eats-Symbol-700x394.jpg" preview={false}/>
+        <SideMenu/>
+      </Sider>
 
-      <List dataSource={dishes} renderItem={(dishItem) =>(
-        <List.Item>
-          <div>{dishItem.name}</div>
-          <div>{dishItem.quantity}</div>
-          <div>{dishItem.price}</div>
-        </List.Item>
-      )}>
+      <Layout>
 
-      </List>
-    </Card>
-  )
+        <Content style={{backgroundColor: 'ash'}}>
+          <Routes>
+            <Route path="" element={<Orders/>}/>
+            <Route path="order/:id" element={<DetailedOrder/>}/>
+            <Route path="menu" element={<RestaurantMenu/>}/>
+          </Routes>
+        </Content>
+
+        <Footer style={{textAlign: 'center', backgroundColor: 'white'}}>
+          <p>Uber Eats Restaurent Dashboard | 2022</p>
+        </Footer>
+
+      </Layout>
+
+    </Layout>
+  );
 }
+
+
 
 export default App;
