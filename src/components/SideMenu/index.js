@@ -13,7 +13,7 @@ const SideMenu = () => {
             label: 'Menu'
         },
         {
-            key: "order-history",
+            key: "orders-history",
             label: 'Order History'
         },
         {
