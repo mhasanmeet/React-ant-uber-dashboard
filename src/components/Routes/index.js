@@ -4,6 +4,7 @@ import RestaurantMenu from "../../modules/RestaurantMenu";
 import CreateMenuItem from "../..//modules/CreateMenuItem";
 import OrdersHistory from "../..//modules/OrderHistory";
 import { Routes, Route } from 'react-router-dom';
+import Settings from "../../modules/Settings"
 
 
 const AppRoutes = () =>{
@@ -14,6 +15,7 @@ const AppRoutes = () =>{
             <Route path="menu" element={<RestaurantMenu/>}/>
             <Route path="menu/create" element={<CreateMenuItem/>}/>
             <Route path="orders-history" element={<OrdersHistory/>}/>
+            <Route path="settings" element={<Settings/>}/>
         </Routes>
     )
 }

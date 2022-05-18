@@ -2,6 +2,9 @@
 
 * Use Ant Design 
 * User React Router
+* Use **react-google-places-autocomplete** package
+* Use React State
+* use Propos
 
 ----------
 
@@ -14,6 +17,10 @@ Third: Implement Navigation as ```navigate(menuItem.key)```
 
 1. Form
 
-[NotJust Dev Tutorial](https://www.youtube.com/watch?v=9Mc38zi-QiI)
+----------
+**Error**
 
-2:1:08
+* Settings -- Google Auto Complete API error, 
+* Google GCP Billing issues
+
+[NotJust Dev Tutorial](https://www.youtube.com/watch?v=9Mc38zi-QiI)
